@@ -3,7 +3,7 @@ data_path= #change to some path where your data is stored
 
 WT= #header name of WT files
 KO= #header name of KO files
-
+index= # name of index file
 
 ##################################################
 ############## Convert sra to fastq ##############
@@ -62,5 +62,10 @@ sh ~/Downloads/SICER_V1.1/SICER/SICER-df-rb.sh ${data_path}/sorted-${KO}.sam.bed
 ############## Gene enrichment ##################
 #################################################
 
-
+python chipseq_peak.py \
+  -e ${data_path}/sorted-${KO}.sam-W200-G${best_gap}-E0.001.scoreisland
+  -c ${data_path}/sorted-${WT}_head.sam-W200-G${best_gap}-E0.001.scoreisland 
+  --pad 1000
+  --genes ## file with start stop postion for genes/ bed file
+  -o ## name of output file
 

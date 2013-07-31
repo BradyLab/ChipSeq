@@ -32,8 +32,8 @@ def main(ko,wt,window_size,outdir)
 if __name__ == "__main__":
     import optparse
     parser = optparse.OptionParser("usage: %prog [options] ")
-    parser.add_option("--ko", dest="ko", help="ko file")
-    parser.add_option("--wt", dest="wt", help="wt file")
+    parser.add_option("--ko", dest="ko", help="ko sam.bed file")
+    parser.add_option("--wt", dest="wt", help="wt sam.bed file")
     parser.add_option("-w", dest="window_size", help="window size", type='int', default=200)
     parser.add_option("-o", dest="outdir", help="location of outdir you want made")
 

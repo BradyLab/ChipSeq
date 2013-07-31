@@ -20,7 +20,7 @@ def get_group(ko,wt,window_size):
     for gap in range(0,6):
         gap_size = gap * window_size
         ##TODO is pvalue too high or too low papers recommend otherwise
-        sicer_cmd = "sh /usr/local/bin/SICER_V1.1/SICER/SICER-df-rb.sh {0} {1} 10000 {2} 0.1 0.001".format(ko,wt,gap_size)
+        sicer_cmd = "sh /usr/local/bin/SICER_V1.1/SICER/SICER-df-rb.sh {0} {1} {2} {3} 0.1 0.001".format(ko,wt,window_size,gap_size)
         commands.getoutput(sicer_cmd)
 
 def main(ko,wt,window_size,outdir)

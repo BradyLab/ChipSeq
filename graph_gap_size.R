@@ -1,13 +1,13 @@
 ### remove top of read files
 # read.table("testing.txt", "\t", header = FALSE, skip=3)
 
-graph_gap_sizes = function(dir):
+graph_gap_sizes = function(dir)
   {
 
   gap_sizes = list()
   islands = list()
 
-  for (file_name in list.files(dir, full.names=TRUE)
+  for (file_name in list.files(dir, full.names=TRUE))
     {
     chip_data <- read.table(file_name, sep="\t")
     island_total <- sum(chip_data[4])

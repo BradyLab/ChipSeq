@@ -18,7 +18,7 @@ graph_gap_sizes = function(dir)
     gap_sizes <- c(gap_sizes, gap_size)
     islands <- c(islands, island_total)
     }
-  return gap_size, islands
+  return(gap_size, islands)
     }
 
 

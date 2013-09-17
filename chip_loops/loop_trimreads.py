@@ -7,6 +7,11 @@ def main(dir_file):
 		print cmd
 		commands.getoutput(cmd)
 
+def bwa_loop(dir_file,index)
+    for file_name in os.listdir(dir_file):
+        sample_name = file_name.split(".")[0]
+        cmd = "bwa aln -t 2 -l 20 {1}.fa {0}.fastq | bwa samse {1}.fa - {0}.fastq > {0}.sam".foramt(sample_name,index)
+        commands.getoutput(cmd)
 
 if __name__ == "__main__":
     import optparse

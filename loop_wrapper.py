@@ -5,7 +5,8 @@ from multiprocessing import Pool
 
 def print_and_run(cmd):
     print "running {0}".format(cmd)
-    commands.getoutput(cmd)
+    output = commands.getoutput(cmd)
+    print output
 
 def main(dir_file,cmd,ncpu):
     pool = Pool(ncpu)
@@ -26,4 +27,4 @@ if __name__ == "__main__":
     parser.add_option("--ncpu", dest="ncpu", help="path to dir")
     (options, _) = parser.parse_args()
 
-    main(options.path,options.cmd,options.ncpu)
+    main(options.path,options.cmd,int(options.ncpu))

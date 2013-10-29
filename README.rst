@@ -13,6 +13,11 @@ Contains a general pipeline for running ChipSeq analysis. This involves converti
 
 Pipelines were developed in the `Brady Lab <http://www-plb.ucdavis.edu/labs/brady/>`_ at UC Davis
 
+Funding
+========
+
+National Science Foundation, IOS-1238243 "Integrative Analysis of Plasticity in Cell Fate Determination in Plants"
+
 Installation
 ============
 
@@ -24,4 +29,12 @@ Installation
 
   - Dependencies were installed onto iplant AMI "ChipSeq" and are available through `atmosphere <https://atmo.iplantcollaborative.org/application/>`_  with install instructions `here <https://github.com/BradyLab/atmosphere_images/blob/master/ChipSeq.md>`_
   - Requires bwa,  samtools, pysam, htseq, SICER, MACS, python2.7
+
+
+Running
+=========
+
+
+  -Create a new directory where the data will be stored
+
 
